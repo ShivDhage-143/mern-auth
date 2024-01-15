@@ -1,18 +1,19 @@
 import mongoose from 'mongoose';
 
 const userSchema = new mongoose.Schema({  //it is like authentication means only this type of data are acceptable.
-    username:{                               //if you know yup or formik validation so it is similar kind of that.
+    username:{ 
+        type: String,                                  //if you know yup or formik validation so it is similar kind of that.
         required: true,
         unique:true,
     },
     email:{
         type:String,
-        required: true,
+        required:true,
         unique:true,
     },
     password:{
         type:String,
-        required: true,
+        required:true,
     }
 },{timestamps: true});
 
