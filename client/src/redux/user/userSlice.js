@@ -4,6 +4,7 @@ const initialState ={
     currentUser: null,
     loading: false,
     error: false,
+    posts: [],
 };
 
 const userSlice = createSlice({
@@ -12,6 +13,7 @@ const userSlice = createSlice({
   reducers: {
     signInStart: (state) => {
       state.loading = true;
+      
     },
     signInSuccess: (state, action) => {
       state.currentUser = action.payload;
@@ -50,6 +52,9 @@ const userSlice = createSlice({
       state.currentUser = null;
       state.loading = false;
       state.error = false;
+    },
+    updatePosts: (state, action) => {
+      state.posts = action.payload;
     },
   },
 });

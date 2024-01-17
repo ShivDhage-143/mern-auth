@@ -111,9 +111,12 @@ export default function Profile() {
       console.log(error);
     }
   };
+  
 
   return (
-    <div className='p-3 max-w-lg mx-auto'>
+
+  
+      <div className='p-3 max-w-lg mx-auto'>
       <h1 className='text-3xl font-semibold text-center my-7'>Profile</h1>
       <form onSubmit={handleSubmit} className='flex flex-col gap-4'>
       <input
@@ -179,18 +182,20 @@ export default function Profile() {
       <div className='flex justify-between mt-5'>
       <span
           onClick={handleDeleteAccount}
-          className='text-red-700 cursor-pointer'
+          className='text-red-600 cursor-pointer '
         >
           Delete Account
         </span>
-       <span onClick={handleSignOut} className='text-red-700 cursor-pointer'>
+       <span onClick={handleSignOut} className='text-red-600  cursor-pointer'>
           Sign out
         </span>
       </div>
       <p className='text-red-700 mt-5'>{error && 'Something went wrong!'}</p>
-      <p className='text-green-700 mt-5'>
+      <p className='text-green-600 mt-5'>
         {updateSuccess && 'User is updated successfully!'}
       </p>
     </div>
+    
   );
 }
+

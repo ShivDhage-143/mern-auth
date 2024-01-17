@@ -41,6 +41,15 @@ export default function SignIn() {
     }
    
   };
+  const backgroundImageStyle = {
+    backgroundImage:
+      "url('https://images.pexels.com/photos/5745761/pexels-photo-5745761.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1')",
+    height: "100vh", // Set the height to cover the entire viewport
+    backgroundSize: "cover",
+    backgroundRepeat: "no-repeat",
+    overflow: "hidden",
+    position: "relative",
+  };
   
   return (
     <div className='p-3 max-w-lg mx-auto'>
@@ -49,11 +58,11 @@ export default function SignIn() {
       <form onSubmit={handleSubmit} className='flex flex-col gap-4'>
     
         <input type="email" placeholder="Email"
-         id='email' className='bg-slate-100 p-3 rounded-lg'
+         id='email' className='bg-slate-200 p-3 rounded-lg'
          onChange={handleChange}/> 
     
         <input type="password" placeholder="Password"
-         id='password' className='bg-slate-100 p-3 rounded-lg'
+         id='password' className='bg-slate-200 p-3 rounded-lg'
          onChange={handleChange}/> 
     
         <button disabled={loading} className='bg-slate-700 text-white p-3 rounded-lg 
